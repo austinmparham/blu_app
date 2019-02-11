@@ -21,11 +21,10 @@
 	</script>
 	{% load static %}
 	<link rel="stylesheet" type="text/css" href="{% static 'blu_app/css/style.css' %}">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body>
-<div class="container">	
-	<div class="col-12 mx-auto">
-		<h1 style="text-align:center;padding-top:20px; padding-bottom:20px; background-color:black; color:white;">{% load static %}<img src="{% static 'blu_app/css/blu_icon.png' %}">XIV BLU Spellbook {% load static %}<img src="{% static 'blu_app/css/blu_icon.png' %}"></h1>
+	<h1 style="text-align:center;padding-top:20px; padding-bottom:20px; background-color:black; color:white; text-align: center;">{% load static %}<img src="{% static 'blu_app/css/blu_icon.png' %}">XIV BLU Spellbook {% load static %}<img src="{% static 'blu_app/css/blu_icon.png' %}"></h1>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
@@ -136,7 +135,5 @@
 				</tr>
 			{% endfor %}
 		</table>
-	</div>
-</div>
 </body>
 </html>
