@@ -80,63 +80,65 @@
 		  </div>
 		</div>
 		<div class="table-responsive">
-		<table cellspacing="0" id="spells">
-			<tr id="header">
-				<td><p>#</p></td>
-				<td><p>Spell</p></td>
-				<td><p>Lowest Source Lvl.</p></td>
-				<td><p>Acquisition</p></td>
-				<td><p>Type</p></td>
-				<td><p>Element</p></td>
-				<td><p>Description</p></td>
+		<table cellspacing="0" id="spells" class="table">
+			<thead>
+			<tr id="header" class="d-flex">
+				<th style="width:5%"><p>#</p></td>
+				<th style="width:5%"><p>Spell</p></td>
+				<th style="width:10%"><p>Lowest Source Lvl.</p></td>
+				<th style="width:10%"><p>Acquisition</p></td>
+				<th style="width:10%"><p>Type</p></td>
+				<th style="width:10%"><p>Element</p></td>
+				<th style="width:50%"><p>Description</p></td>
 			</tr>
+			</thead>
 			{% for spell in spells %}
 				{% if spell.element == "Fire" %}
-				<tr style="background-image: linear-gradient(#C42D2D,#EA6868,#F09B9B)"data-toggle="popover" data-content="{{spell.name}}: Cast Time - {{ spell.cast_time }}s | Recast Time - {{spell.recast_time}}s | MP Cost(Lv.50) - {{spell.mp_cost}} | Cast Range - {{spell.cast_range}}y | Cast Radius - {{spell.cast_radius}}y">
+				<tr class="d-flex" style="background-image: linear-gradient(#C42D2D,#EA6868,#F09B9B)"data-toggle="popover" data-content="{{spell.name}}: Cast Time - {{ spell.cast_time }}s | Recast Time - {{spell.recast_time}}s | MP Cost(Lv.50) - {{spell.mp_cost}} | Cast Range - {{spell.cast_range}}y | Cast Radius - {{spell.cast_radius}}y">
 				{% elif spell.element == "Water" %}
-				<tr style="background-image: linear-gradient(#3380FF,#33D1FF,#C5F2FF)" 	data-toggle="popover" data-content="{{spell.name}}: Cast Time - {{ spell.cast_time }}s | Recast Time - {{spell.recast_time}}s | MP Cost(Lv.50) - {{spell.mp_cost}} | Cast Range - {{spell.cast_range}}y | Cast Radius - {{spell.cast_radius}}y">
+				<tr class="d-flex" style="background-image: linear-gradient(#3380FF,#33D1FF,#C5F2FF)" 	data-toggle="popover" data-content="{{spell.name}}: Cast Time - {{ spell.cast_time }}s | Recast Time - {{spell.recast_time}}s | MP Cost(Lv.50) - {{spell.mp_cost}} | Cast Range - {{spell.cast_range}}y | Cast Radius - {{spell.cast_radius}}y">
 				{% elif spell.element == "Earth" %}
-				<tr style="background-image:linear-gradient(#EAB117,#F3C64D,#F5D581)" data-toggle="popover" data-content="{{spell.name}}: Cast Time - {{ spell.cast_time }}s | Recast Time - {{spell.recast_time}}s | MP Cost(Lv.50) - {{spell.mp_cost}} | Cast Range - {{spell.cast_range}}y | Cast Radius - {{spell.cast_radius}}y">
+				<tr class="d-flex" style="background-image:linear-gradient(#EAB117,#F3C64D,#F5D581)" data-toggle="popover" data-content="{{spell.name}}: Cast Time - {{ spell.cast_time }}s | Recast Time - {{spell.recast_time}}s | MP Cost(Lv.50) - {{spell.mp_cost}} | Cast Range - {{spell.cast_range}}y | Cast Radius - {{spell.cast_radius}}y">
 				{% elif spell.element == "Lightning" %}
-				<tr style="background-image: linear-gradient(#921DC8,#C366EE,#DCA2F7)" data-toggle="popover" data-content="{{spell.name}}: Cast Time - {{ spell.cast_time }}s | Recast Time - {{spell.recast_time}}s | MP Cost(Lv.50) - {{spell.mp_cost}} | Cast Range - {{spell.cast_range}}y | Cast Radius - {{spell.cast_radius}}y">
+				<tr class="d-flex" style="background-image: linear-gradient(#921DC8,#C366EE,#DCA2F7)" data-toggle="popover" data-content="{{spell.name}}: Cast Time - {{ spell.cast_time }}s | Recast Time - {{spell.recast_time}}s | MP Cost(Lv.50) - {{spell.mp_cost}} | Cast Range - {{spell.cast_range}}y | Cast Radius - {{spell.cast_radius}}y">
 				{% elif spell.element == "Ice" %}
-				<tr style="background-image: linear-gradient(#B0FBD9,#69AE8F,#016135)" data-toggle="popover" data-content="{{spell.name}}: Cast Time - {{ spell.cast_time }}s | Recast Time - {{spell.recast_time}}s | MP Cost(Lv.50) - {{spell.mp_cost}} | Cast Range - {{spell.cast_range}}y | Cast Radius - {{spell.cast_radius}}y">
+				<tr class="d-flex" style="background-image: linear-gradient(#B0FBD9,#69AE8F,#016135)" data-toggle="popover" data-content="{{spell.name}}: Cast Time - {{ spell.cast_time }}s | Recast Time - {{spell.recast_time}}s | MP Cost(Lv.50) - {{spell.mp_cost}} | Cast Range - {{spell.cast_range}}y | Cast Radius - {{spell.cast_radius}}y">
 				{% elif spell.element == "Wind" %}
-				<tr style="background-image: linear-gradient(#D4FFCF,#6AFC59)" data-toggle="popover" data-content="{{spell.name}}: Cast Time - {{ spell.cast_time }}s | Recast Time - {{spell.recast_time}}s | MP Cost(Lv.50) - {{spell.mp_cost}} | Cast Range - {{spell.cast_range}}y | Cast Radius - {{spell.cast_radius}}y">
+				<tr class="d-flex" style="background-image: linear-gradient(#D4FFCF,#6AFC59)" data-toggle="popover" data-content="{{spell.name}}: Cast Time - {{ spell.cast_time }}s | Recast Time - {{spell.recast_time}}s | MP Cost(Lv.50) - {{spell.mp_cost}} | Cast Range - {{spell.cast_range}}y | Cast Radius - {{spell.cast_radius}}y">
 				{% elif spell.spell_type == "Physical" %}
-				<tr style="background-image: linear-gradient(#FFFFFF,#888888,#3D3D3D)" data-toggle="popover" data-content="{{spell.name}}: Cast Time - {{ spell.cast_time }}s | Recast Time - {{spell.recast_time}}s | MP Cost(Lv.50) - {{spell.mp_cost}} | Cast Range - {{spell.cast_range}}y | Cast Radius - {{spell.cast_radius}}y">
+				<tr class="d-flex" style="background-image: linear-gradient(#FFFFFF,#888888,#3D3D3D)" data-toggle="popover" data-content="{{spell.name}}: Cast Time - {{ spell.cast_time }}s | Recast Time - {{spell.recast_time}}s | MP Cost(Lv.50) - {{spell.mp_cost}} | Cast Range - {{spell.cast_range}}y | Cast Radius - {{spell.cast_radius}}y">
 				{% else %}
-				<tr style="background-image: linear-gradient(#FFFFFF,#B2FA95,#E651FE)" data-toggle="popover" data-content="{{spell.name}}: Cast Time - {{ spell.cast_time }}s | Recast Time - {{spell.recast_time}}s | MP Cost(Lv.50) - {{spell.mp_cost}} | Cast Range - {{spell.cast_range}}y | Cast Radius - {{spell.cast_radius}}y">
+				<tr class="d-flex" style="background-image: linear-gradient(#FFFFFF,#B2FA95,#E651FE)" data-toggle="popover" data-content="{{spell.name}}: Cast Time - {{ spell.cast_time }}s | Recast Time - {{spell.recast_time}}s | MP Cost(Lv.50) - {{spell.mp_cost}} | Cast Range - {{spell.cast_range}}y | Cast Radius - {{spell.cast_radius}}y">
 				{% endif %}
-					<td><p>No.{{spell.id}}</p></td>
-					<td>
+					<td style="width:5%"><p>No.{{spell.id}}</p></td>
+					<td style="width:5%">
 						<table>
 							<tr><p class="spell_icon">{% load static %}<img src='{% static spell.icon %}'></p></tr>
 							<tr><p style="color:blue;">{{spell.name}}</p></tr>
 						</table>
 					</td>
-					<td><p>{{spell.lvl_learned}}</p></td>
+					<td style="width:10%"><p>{{spell.lvl_learned}}</p></td>
 					{% if spell.acquisition != null %}
-					<td><p>{{spell.acquisition}}</p></td>
+					<td style="width:10%"><p>{{spell.acquisition}}</p></td>
 					{% elif spell.monsters != null %}
-					<td><table>
+					<td style="width:10%"><table>
 						{% for monster in spell.monsters.all %}
 						<tr><a href={{monster.link}}>{{monster.name}}({{monster.level}})</a><br></tr>
 						{% endfor %}
 					</td></table>
 					{% else %}
-					<td><p>Acquistion Needed.</p></td>	
+					<td style="width:10%"><p>Acquistion Needed.</p></td>	
 					{% endif %}
-					<td><p>{{spell.spell_type}}</p></td>
+					<td style="width:10%"><p>{{spell.spell_type}}</p></td>
 					{% if spell.spell_type == "Magic" %}
 						<td><p>{{spell.element}}</p></td>
 					{% else %}
 						<td><p>{{spell.phys_type}}</p></td>
 					{% endif %}
-					<td><p class="desc">{{spell.desc}}</p></td>
+					<td style="width:50%"><p class="desc">{{spell.desc}}</p></td>
 				</tr>
 			{% endfor %}
 		</table>
 		</div>
 </body>
-</html>
+</html> 

@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from . import views           # This line is new!
 urlpatterns = [
-	url(r'^$', views.index),
+	url(r'^$', views.spells),
 	url(r'^spells$', views.spells),
 	url(r'^add_spell$', views.add_spell),
 	url(r'^spells/(?P<element>\w+)$',views.sort),
